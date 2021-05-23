@@ -15,7 +15,7 @@ spec:
   source:
     repoURL: https://github.com/bfblog/ci-env
     targetRevision: work
-    path: kubernetes/tekton
+    path: kubernetes/tekton-pipelines
 
 
     # directory
@@ -51,4 +51,5 @@ spec:
   - group: apps
     kind: Deployment
     jsonPointers:
+    - /spec/replicas
     - /spec/replicas

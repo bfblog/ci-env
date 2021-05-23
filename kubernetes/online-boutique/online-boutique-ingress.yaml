@@ -23,6 +23,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: frontend-external
+                name: frontend
                 port:
                   number: 80

@@ -14,3 +14,12 @@ spec:
       protocol: HTTP
     hosts:
     - "online-boutique.127.0.0.1.nip.io"
+  - port:
+      number: 443
+      name: https
+      protocol: HTTPS
+    tls:
+      mode: SIMPLE
+      credentialName: online-boutique-tls-credential
+    hosts:
+    - "marketplace.boutiquestore.com"

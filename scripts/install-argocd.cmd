@@ -5,7 +5,8 @@ REM create namespace argocd
 kubectl.exe create namespace argocd
 
 REM install argocd from git repository
-kubectl.exe apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+#kubectl.exe apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+kubectl.exe apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v2.1.0-rc3/manifests/install.yaml
 
 REM patch service to type LoadBalancer
 kubectl.exe patch svc argocd-server -n argocd -p "{\"spec\":{\"type\":\"LoadBalancer\"}}"

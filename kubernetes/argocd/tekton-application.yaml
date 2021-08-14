@@ -1,15 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: bfblog-tekton
+  name: tekton
   # You'll usually want to add your resources to the argocd namespace.
-  namespace: argocd
+  namespace: tekton
   # Add a this finalizer ONLY if you want these to cascade delete.
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   # The project the application belongs to.
-  project: bfblog
+  project: default
 
   # Source of the application manifests
   source:
@@ -25,7 +25,7 @@ spec:
   # Destination cluster and namespace to deploy the application
   destination:
     server: https://kubernetes.default.svc
-    namespace: tekton-pipelines
+    namespace: tekton
 
   # Sync policy
   syncPolicy:
@@ -51,5 +51,4 @@ spec:
   - group: apps
     kind: Deployment
     jsonPointers:
-    - /spec/replicas
     - /spec/replicas

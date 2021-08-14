@@ -23,6 +23,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: tekton-dashboard
+                name: frontend
                 port:
-                  number: 9097
+                  number: 80

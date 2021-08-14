@@ -12,7 +12,7 @@ REM patch service to type LoadBalancer
 kubectl.exe patch svc argocd-server -n argocd -p "{\"spec\":{\"type\":\"LoadBalancer\"}}"
 
 REM install ingress 
-kubectl.exe apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.46.0/deploy/static/provider/cloud/deploy.yaml
+kubectl.exe apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.48.1/deploy/static/provider/cloud/deploy.yaml
 kubectl.exe wait --namespace ingress-nginx --for=condition=ready pod --selector=app.kubernetes.io/component=controller --timeout=120s
 
 REM install cert-manager

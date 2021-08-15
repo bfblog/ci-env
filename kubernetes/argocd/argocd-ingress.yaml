@@ -11,10 +11,10 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   #ingressClassName: "nginx"
-  tls:
-  - hosts:
-    - argocd.127.0.0.1.nip.io
-    secretName: argocd-secret # do not change, this is provided by Argo CD
+  #tls:
+  #- hosts:
+  #  - argocd.127.0.0.1.nip.io
+  #  secretName: argocd-secret # do not change, this is provided by Argo CD
   rules:
     - host: argocd.127.0.0.1.nip.io
       http:
